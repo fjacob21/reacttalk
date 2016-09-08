@@ -19,13 +19,19 @@ class Child extends React.Component{
 class ParentEx1 extends React.Component{
         constructor(props) {
                 super(props);
+                this.state = {srcvisible: true};
+        }
+
+        onClick(event){
+
         }
 
         render(){
                 return (
-                        <div className='parent'>
+                        <div className='parent' onClick={this.onClick.bind(this)}>
                                 <Child> Parent </Child>
-                                        <Highlight className='hljs'>
+                                <div className='srcframe'>
+                                        <Highlight className='src hljs'>
           {`import React from 'react'
           import Navbar from './navbar'
           var Highlight = require('react-highlight');
@@ -59,7 +65,7 @@ class ParentEx1 extends React.Component{
           }
 
           module.exports = ParentEx1;`}
-        </Highlight>
+        </Highlight></div>
                                 <Navbar prev='' next='ex2'></Navbar>
                         </div>)
         }

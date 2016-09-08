@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from './navbar'
-
+var Highlight = require('react-highlight');
 
 class Button extends React.Component{
         constructor(props) {

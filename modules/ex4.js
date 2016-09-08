@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from './navbar'
+var Highlight = require('react-highlight');
 
 function leftPad(number, targetLength) {
     var output = number.toString(16) + '';
